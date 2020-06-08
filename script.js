@@ -37,11 +37,40 @@ console.log(result);
 var bool = (num1 == 10 && num2 == 11);
 console.log(bool);
 
-if(bool == true)
+speed = 75;
+
+
+if(speed <= 80)
 {
-    console.log("C'est vrai")
+    if(speed <= 50)
+    {
+        console.log("Tu roules trop doucement")
+    }
+    else
+    {
+        console.log("Tu roules à la bonne vitesse")
+    }
+}
+else if(speed <= 100)
+{
+    console.log("Ralenties tu roules trop vite")
 }
 else
 {
-    console.log("C'est faux")
+    console.log("Tu roules beaucoup trop vite")
+};
+
+
+var favoriteColor = "noir" 
+
+switch(favoriteColor)
+{
+    case "blue":
+        console.log("C'est bleu")
+        break;
+    case "rouge":
+        console.log("C'est rouge")
+        break;
+    default:
+        console.log("Ce n'est ni bleu ni rouge")
 };
