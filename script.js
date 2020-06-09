@@ -149,7 +149,7 @@ for(var property in dog)
     console.log(dog[property]);
 }
 
-console.log("------------")
+console.log("------------");
 
 /*var car = new Object();
 
@@ -179,6 +179,7 @@ function Car(name, type, year, marque, color)
     this.year = year;
     this.marque = marque;
     this.color = color;
+    this.completeName = this.marque + " " + this.name;
 }
 
 var Audi_A4 = new Car("A4", "Berline", "2014", "Audi", "Noire");
