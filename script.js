@@ -37,40 +37,127 @@ console.log(result);
 var bool = (num1 == 10 && num2 == 11);
 console.log(bool);
 
+// Condition if
+
 speed = 75;
-
-
 if(speed <= 80)
 {
     if(speed <= 50)
     {
-        console.log("Tu roules trop doucement")
+        console.log("Tu roules trop doucement");
     }
     else
     {
-        console.log("Tu roules à la bonne vitesse")
+        console.log("Tu roules à la bonne vitesse");
     }
 }
 else if(speed <= 100)
 {
-    console.log("Ralenties tu roules trop vite")
+    console.log("Ralenties tu roules trop vite");
 }
 else
 {
-    console.log("Tu roules beaucoup trop vite")
-};
+    console.log("Tu roules beaucoup trop vite");
+}
 
+// Switch case, comme un if mais avec des cas particuliers
 
-var favoriteColor = "noir" 
-
+var favoriteColor = "bleu" 
 switch(favoriteColor)
 {
-    case "blue":
-        console.log("C'est bleu")
+    case "bleu":
+        console.log("C'est bleu");
         break;
     case "rouge":
-        console.log("C'est rouge")
+        console.log("C'est rouge");
         break;
     default:
-        console.log("Ce n'est ni bleu ni rouge")
-};
+        console.log("Ce n'est ni bleu ni rouge");
+}
+
+var number = 0;
+while(number > 0 && number == 3)
+{
+    console.log(number);
+    number++;
+} 
+
+// ne fonctionne pas car la confition n'est pas vérifiée (number n'est pas supérieur à 0)
+// mais fonctionne avec le do while car 0 est imprimé à l'écran et indenté à 1avant la vérification
+
+do
+{
+    console.log(number);
+    number++;
+}
+while(number <= 3);
+// Le do while est comme un while mais avec un tour gratuit au début, le do est exécuté avant de vérifier la condition du while.
+
+var chaine = "zz"
+for(var x = 0; x <= 4; x++)
+{
+    console.log(chaine);
+    chaine += "z";
+}
+
+// Fonction 
+
+function multiply(number1, number2)
+{
+    var resultMultiply = number1 * number2;
+    return resultMultiply;
+}
+
+var a = 5;
+var b = 6;
+var result = multiply(a,b);
+console.log(result);
+
+// Tableaux
+
+var fruits = ["pomme", "poire", "bannanes", "citrons"];
+fruits.push("kiwi"); // ajoute kiwi au tableau
+for(var i = 0; i < fruits.length; i++)
+{
+    console.log(fruits[i]);
+}
+
+console.log("-----------")
+
+fruits.pop(); // Enlève la dernière valeur du tableau
+for(var i = 0; i < fruits.length; i++)
+{
+    console.log(fruits[i]);
+}
+
+var slice = fruits.slice(2);
+console.log(slice);
+
+var tabDansTab = [[0,1,15],[4,8,2],[12,3,5]];
+console.log(tabDansTab[0][0]); // affiche la valeur de l'indice 0 du tableau à l'indice 2.
+
+// Objets 
+
+var dog = {
+    name : "Cali",
+    couleur : "noire",
+    age : "14"
+}
+
+for(var property in dog)
+{
+    console.log(dog[property]);
+}
+
+console.log("------------")
+
+var car = new Object();
+car.type = "4x4";
+car.year = "2008";
+car.marque = "audi";
+car.unACent = function(){console.log("6 secondes")};
+
+for(var property in car)
+{
+    console.log(car[property]);
+}
