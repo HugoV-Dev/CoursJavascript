@@ -151,13 +151,37 @@ for(var property in dog)
 
 console.log("------------")
 
-var car = new Object();
+/*var car = new Object();
+
+car.name = "A4"
 car.type = "4x4";
 car.year = "2008";
 car.marque = "audi";
-car.unACent = function(){console.log("6 secondes")};
-
-for(var property in car)
+color = "noire"
+car.bruit = function(number)
 {
-    console.log(car[property]);
+    while(number > 0)
+    {
+        console.log("Vroum");
+        number--;
+    }
+};
+
+car.bruit(4);
+*/
+
+// Fonction constructeur
+
+function Car(name, type, year, marque, color)
+{
+    this.name = name;
+    this.type = type;
+    this.year = year;
+    this.marque = marque;
+    this.color = color;
 }
+
+var Audi_A4 = new Car("A4", "Berline", "2014", "Audi", "Noire");
+var Peugeot_208 = new Car("208", "Ville", "2018", "Peugeot", "Grise");
+console.log(Audi_A4);
+console.log(Peugeot_208);
